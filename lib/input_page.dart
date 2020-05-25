@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'reusable_card.dart';
@@ -96,8 +95,12 @@ class _InputPageState extends State<InputPage> {
                             ),
                             SliderTheme(
                               data: SliderTheme.of(context).copyWith(
-                                activeTrackColor: Color(0xFFEB1555),
+                                activeTrackColor: Colors.white,
                                 inactiveTrackColor: Color(0xFF8D8E98),
+                                thumbColor: Color(0xFFEB1555),
+                                overlayColor: Color(0x30EB1555),
+                                thumbShape:RoundSliderThumbShape(enabledThumbRadius:15.0),
+                                overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0),
                               ),
                               child: Slider(
                                 value: _height.toDouble(),
